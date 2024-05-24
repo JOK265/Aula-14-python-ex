@@ -1,12 +1,13 @@
-n1=('').isnumeric()
-n2=('').isnumeric()
-while n1==False or n2==False:
+n1=None
+n2=None
+while n1 is None or n2 is None:
     try:
         n1=int(input('Digite o primeiro termo: '))
         n2=int(input('Digite a razão: '))
     except ValueError:
         print('Digite apenas valores numéricos!')
-        continue
+        n1=None
+        n2=None
 n3=1
 while n3!=11:
     pa=n1+(n3-1)*n2
